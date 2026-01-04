@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.app {
+  width: 380px;
+  padding: 20px;
+}
+
+select, textarea, button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background: #ff4d6d;
+  color: white;
+  font-weight: bold;
+}
+
+/* PLAYER */
+.player {
+  margin-top: 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+.album-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.album {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  box-shadow: 0 0 25px rgba(255,255,255,0.4);
+  animation: spin 6s linear infinite;
+  animation-play-state: paused;
+}
+
+.album.playing {
+  animation-play-state: running;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* LOVE BUTTON */
+.love-btn {
+  font-size: 28px;
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.love-btn.loved {
+  color: #ff4d6d;
+  animation: heartbeat 0.6s;
+  text-shadow: 0 0 12px #ff4d6d;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.4); }
+  60% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* SONG LIST */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+li {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.1);
+}
+
+li.playing {
+  background: rgba(255,255,255,0.35);
+  font-weight: bold;
+}

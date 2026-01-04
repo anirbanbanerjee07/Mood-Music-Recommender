@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mood Music Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app glass">
+
+    <h2>Mood → Music 🎧</h2>
+
+    <select id="mood">
+      <option value="happy">Happy 😊</option>
+      <option value="sad">Sad 😢</option>
+      <option value="angry">Angry 😡</option>
+      <option value="chill">Chill 😌</option>
+    </select>
+
+    <textarea id="note" placeholder="How are you feeling?"></textarea>
+
+    <button id="getSongsBtn">Get Songs 🎶</button>
+
+    <!-- PLAYER -->
+    <div class="player glass">
+      <h3 id="nowPlaying">No song playing</h3>
+
+      <div class="album-wrapper">
+        <div class="album" id="album"></div>
+      </div>
+
+      <audio id="audioPlayer" controls></audio>
+
+      <button id="loveBtn" class="love-btn">❤</button>
+    </div>
+
+    <!-- SONG LIST -->
+    <ul id="songs"></ul>
+
+  </div>
+
+  <script src="app.js"></script>
+  <script type="text/javascript">
+    (function (l) {
+      if (l.search[1] === "/") {
+        var decoded = l.search
+          .slice(1)
+          .split("&")
+          .map(function (s) {
+            return s.replace(/~and~/g, "&");
+          })
+          .join("?");
+        window.history.replaceState(
+          null,
+          null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    })(window.location);
+  </script>
+</body>
+</html>
