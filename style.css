@@ -115,3 +115,13 @@ li.playing {
   background: rgba(255,255,255,0.35);
   font-weight: bold;
 }
+
+.footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #eee5e5;
+  pointer-events: none; /* prevents footer from blocking clicks */
+}
