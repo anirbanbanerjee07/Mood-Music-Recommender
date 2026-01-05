@@ -21,6 +21,47 @@
 
 ---
 
+## 🛢️ Database 
+
+- My first Supabase Database project with use of `sql` commands and some pre installed features 😄
+- `SQL`
+
+
+```sql
+### Moods Table
+
+CREATE TABLE moods (
+  id BIGSERIAL PRIMARY KEY,
+  mood TEXT NOT NULL,
+  note TEXT,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+### Songs Table
+
+CREATE TABLE songs (
+  id BIGSERIAL PRIMARY KEY,
+  mood TEXT NOT NULL,
+  song_name TEXT NOT NULL,
+  song_url TEXT NOT NULL
+);
+
+### Sample Songs
+
+INSERT INTO songs (mood, song_name, song_url) VALUES
+('happy', 'Dil Chori', 'https://YOUR_PROJECT.supabase.co/storage/v1/object/public/songs/dil_chori.mp3'),
+('sad', 'Tum Hi Ho', 'https://YOUR_PROJECT.supabase.co/storage/v1/object/public/songs/tum_hi_ho.mp3'),
+('angry', 'Malhari', 'https://YOUR_PROJECT.supabase.co/storage/v1/object/public/songs/malhari.mp3'),
+('chill', 'Raabta', 'https://YOUR_PROJECT.supabase.co/storage/v1/object/public/songs/raabta.mp3');
+```
+
+- `BUCKET`
+- `PROJECT API`
+- `PROJECT URL`
+- `.MP3`
+
+---
+
 ## 📂 Project Structure
 
 mood-music-player/
@@ -86,3 +127,15 @@ http://localhost:3000
 ---
 
 ## 📸 Preview
+
+![Mood Music Player Preview](Preview/ScreenShot1.jpg)
+
+---
+
+## 👨‍💻 Author
+
+Made with ❤️ by Anirban Banerjee
+
+---
+
+Code ☕ Coffee 🔁 Repeat
