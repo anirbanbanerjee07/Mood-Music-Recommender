@@ -1,6 +1,6 @@
 // Supabase config
-const SUPABASE_URL = "https://smwkmuyoywwqcspdppog.supabase.co";
-const SUPABASE_ANON_KEY = "sb_publishable_J2RK4dwr-_FW_DeCOOWA6Q_EQdf_Z87";
+const SUPABASE_URL = "YOUR_PROJECT_SUPABASE_URL";
+const SUPABASE_ANON_KEY = "YOUR_PROJECT_SUPABASE_API";
 
 const supabaseClient = supabase.createClient(
   SUPABASE_URL,
@@ -82,3 +82,4 @@ audioPlayer.addEventListener("pause", () => {
 document
   .getElementById("getSongsBtn")
   .addEventListener("click", saveMood);
+
