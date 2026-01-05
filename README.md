@@ -24,11 +24,11 @@
 ## 📂 Project Structure
 
 mood-music-player/
-│
-├── index.html
-├── style.css
-├── app.js
-├── README.md
+- │
+- ├── index.html
+- ├── style.css
+- ├── app.js
+- ├── README.md
 
 ---
 
@@ -54,8 +54,6 @@ mood-music-player/
 | mood | text |
 | note | text |
 
----
-
 ### 2️⃣ Storage Bucket
 
 - Bucket name: **`songs`**
@@ -64,6 +62,27 @@ mood-music-player/
 
 Example URL:
 https://YOUR_PROJECT_ID.supabase.co/storage/v1/object/public/songs/dil_chori.mp3
+```
 
-yaml
-Copy code
+```yaml
+
+## 🚀 Run Locally
+
+### Using VS Code Live Server
+```bash
+live-server --port=3000 --host=0.0.0.0
+```
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🔐 Environment Note
+⚠️ Never expose Service Role Key
+- Use Supabase Anon/Public Key only in frontend.
+
+---
+
+## 📸 Preview
